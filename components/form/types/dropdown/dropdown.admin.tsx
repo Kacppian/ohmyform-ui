@@ -49,6 +49,16 @@ export const DropdownAdmin: React.FC<FieldAdminProps> = (props) => {
                         <Input placeholder={t('type:dropdown.valuePlaceholder')} />
                       </Form.Item>
                     </Col>
+                    <Col span={8}>
+                      <Form.Item
+                        wrapperCol={{ span: 24 }}
+                        name={[field.name, 'imageUrl']}
+                        style={{ marginBottom: 0 }}
+                        rules={[{ required: false }]}
+                      >
+                        <Input placeholder={t('type:dropdown.imageUrlPlaceholder')} />
+                      </Form.Item>
+                    </Col>
                     <Col span={4}>
                       <Button danger onClick={() => remove(index)}>
                         {t('type:dropdown.removeOption')}

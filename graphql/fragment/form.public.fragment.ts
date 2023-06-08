@@ -110,6 +110,7 @@ export const FORM_PUBLIC_FRAGMENT = gql`
         key
         title
         value
+        imageUrl
       }
 
       logic {
@@ -125,6 +126,9 @@ export const FORM_PUBLIC_FRAGMENT = gql`
         steps
         shape
       }
+
+      ctaText
+      imageUrl
     }
 
     design {

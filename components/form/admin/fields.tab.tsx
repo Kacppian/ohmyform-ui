@@ -22,6 +22,8 @@ export const FieldsTab: React.FC<Props> = (props) => {
   const { t } = useTranslation()
   const [nextType, setNextType] = useState('textfield')
 
+  console.log(props, 'props');
+
   const renderType = useCallback(
     (
       field: FieldData,

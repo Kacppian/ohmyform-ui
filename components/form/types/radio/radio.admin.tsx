@@ -15,6 +15,14 @@ export const RadioAdmin: React.FC<FieldAdminProps> = (props) => {
       >
         <Input />
       </Form.Item>
+      <Form.Item
+        label={t('type:imageUrl.default')}
+        name={[props.field.name as string, 'imageUrl']}
+        rules={[{ type: 'url', message: t('validation:invalidUrl') }]}
+        labelCol={{ span: 6 }}
+      >
+        <Input type={'url'} />
+      </Form.Item>
 
       <Form.List name={[props.field.name as string, 'options']}>
         {(fields, { add, remove }) => {

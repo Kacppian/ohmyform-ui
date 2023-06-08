@@ -31,9 +31,9 @@ WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app /usr/src/app
 
 ENV PORT=4000 \
-    NODE_ENV=production
+    NODE_ENV=dev
 
 # Change to non-root privilege
 USER ohmyform
 
-CMD [ "yarn", "start" ]
+CMD [ "yarn", "start:dev" ]

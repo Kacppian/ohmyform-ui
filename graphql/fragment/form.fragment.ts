@@ -21,6 +21,7 @@ export interface FormFieldOptionFragment {
   key?: string
   title?: string
   value: string
+  imageUrl?: string
 }
 
 export interface FormFieldOptionKeysFragment {
@@ -57,6 +58,9 @@ export interface FormFieldFragment {
     steps?: number
     shape?: string
   }
+
+  ctaText?: string
+  imageUrl?: string
 }
 
 export interface FormHookFragment {
@@ -142,6 +146,7 @@ export const FORM_FRAGMENT = gql`
         key
         title
         value
+        imageUrl
       }
 
       logic {
@@ -158,6 +163,9 @@ export const FORM_FRAGMENT = gql`
         steps
         shape
       }
+
+      ctaText
+      imageUrl
     }
 
     notifications {

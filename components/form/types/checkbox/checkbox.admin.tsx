@@ -49,6 +49,14 @@ export const CheckboxAdmin: React.FC<FieldAdminProps> = (props) => {
                         <Input placeholder={t('type:checkbox:valuePlaceholder')} />
                       </Form.Item>
                     </Col>
+                    <Form.Item
+                      wrapperCol={{ span: 24 }}
+                      name={[field.name, 'imageUrl']}
+                      style={{ marginBottom: 0 }}
+                      rules={[{ required: false }]}
+                    >
+                      <Input placeholder={t('type:checkbox.imageUrlPlaceholder')} />
+                    </Form.Item>
                     <Col span={4}>
                       <Button danger onClick={() => remove(index)}>
                         {t('type:checkbox:removeOption')}

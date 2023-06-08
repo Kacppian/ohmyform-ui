@@ -3,14 +3,14 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { FieldAdminProps } from '../field.admin.props'
 
-export const TextfieldAdmin: React.FC<FieldAdminProps> = (props) => {
+export const SlideAdmin: React.FC<FieldAdminProps> = (props) => {
   const { t } = useTranslation()
 
   return (
-    <>
+    <div>
       <Form.Item
-        label={t('type:textfield:default')}
-        name={[props.field.name as string, 'defaultValue']}
+        label={t('form:startPage.continueButtonText')}
+        name={[props.field.name as string, 'ctaText']}
         labelCol={{ span: 6 }}
       >
         <Input />
@@ -23,6 +23,6 @@ export const TextfieldAdmin: React.FC<FieldAdminProps> = (props) => {
       >
         <Input type={'url'} />
       </Form.Item>
-    </>
+    </div>
   )
 }

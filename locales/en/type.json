@@ -6,7 +6,8 @@
     "default": "Default Value",
     "name": "Checkbox",
     "options": "Checkboxes",
-    "removeOption": "Remove"
+    "removeOption": "Remove",
+    "imageUrlPlaceholder": "Image Url"
   },
   "date": {
     "default": "Default Date",
@@ -24,7 +25,8 @@
     "options": "Options",
     "removeOption": "Remove",
     "titlePlaceholder": "Title",
-    "valuePlaceholder": "Value"
+    "valuePlaceholder": "Value",
+    "imageUrlPlaceholder": "Image Url"
   },
   "email": {
     "default": "Default Email",
@@ -83,5 +85,12 @@
   "yes_no": {
     "default": "Default Value",
     "name": "Yes \/ No"
+  },
+  "slide": {
+    "default": "Default Value",
+    "name": "Slide"
+  },
+  "imageUrl": {
+    "default": "Image Url"
   }
 }
