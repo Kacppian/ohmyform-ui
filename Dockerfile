@@ -1,4 +1,4 @@
-FROM node:14-alpine AS builder
+FROM --platform=linux/amd64 node:14-alpine AS builder
 MAINTAINER OhMyForm <admin@ohmyform.com>
 
 WORKDIR /usr/src/app
@@ -20,7 +20,7 @@ RUN npm prune --production
 # there is some problem running node prune that then prevents the frontend to load (just start with /form/1 and it will crash)
 #RUN /usr/local/bin/node-prune
 
-FROM node:14-alpine
+FROM --platform=linux/amd64 node:14-alpine
 MAINTAINER OhMyForm <admin@ohmyform.com>
 
 # Create a group and a user with name "ohmyform".
@@ -31,9 +31,9 @@ WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app /usr/src/app
 
 ENV PORT=4000 \
-    NODE_ENV=dev
+    NODE_ENV=production
 
 # Change to non-root privilege
 USER ohmyform
 
-CMD [ "yarn", "start:dev" ]
+CMD [ "yarn", "start" ]

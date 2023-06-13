@@ -132,8 +132,6 @@ export const CardLayout: React.FC<LayoutProps> = (props) => {
     setLoading(false)
   }
 
-  console.log('render')
-
   const render = () => {
     switch (step) {
       case 'start':
